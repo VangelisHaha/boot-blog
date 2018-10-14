@@ -1,0 +1,1 @@
+docker stop boot-blog&&docker rm boot-blog&&docker rmi boot-blog &&docker build -t="boot-blog" . &&docker run -d -p 8080:8080  --name boot-blog boot-blog;
