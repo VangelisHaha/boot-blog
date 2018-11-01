@@ -2,7 +2,9 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .ftl
-    #数据库链接配置
+  #数据库链接配置
+  redis:
+    host: 119.23.31.179
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://119.23.31.179/blog

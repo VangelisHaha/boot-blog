@@ -43,8 +43,8 @@ public class DruidDataSourceConfig {
         Map<String, String> initParams = new HashMap<>(3);
         //默认就是允许所有访问
         initParams.put("allow", "");
-        initParams.put("loginUsername", "admin");
-        initParams.put("loginPassword", "123456");
+        initParams.put("loginUsername", "vangelis");
+        initParams.put("loginPassword", "Vangelis");
         bean.setInitParameters(initParams);
         return bean;
     }

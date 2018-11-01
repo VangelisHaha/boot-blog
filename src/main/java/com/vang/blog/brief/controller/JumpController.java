@@ -37,7 +37,15 @@ public class JumpController {
      */
     @GetMapping("/archives")
     public String archives(){
-
         return "blog/archives";
+    }
+
+    /**
+     * 跳转到相册
+     * @return blog/blogDetails.ftl
+     */
+    @GetMapping("/photo")
+    public String photo(){
+        return "blog/photo";
     }
 }
