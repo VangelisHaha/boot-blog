@@ -1,9 +1,10 @@
 <#include "com.ftl">
 <@layout>
-<div class="post-block archive">
+<div id="content" class="content">
+    <div class="post-block archive">
     <div id="posts" class="posts-collapse">
         <span class="archive-move-on"></span> <span class="archive-page-counter">        嗯..! 目前共计 3 篇日志。 继续努力。
-                         </span>
+                             </span>
         <div class="collection-title">
             <h1 class="archive-year" id="archive-year-2018">2018</h1>
         </div>
@@ -49,6 +50,7 @@
                 </div>
             </header>
         </article>
+    </div>
     </div>
 </div>
 </@layout>

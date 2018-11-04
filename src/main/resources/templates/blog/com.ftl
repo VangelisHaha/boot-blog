@@ -71,7 +71,6 @@
     </script>
     <link rel="canonical" href="http://yoursite.com/"/>
     <title>心如明镜</title></head>
-<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <div class="container sidebar-position-left  page-home">
     <div class="headband">
@@ -111,9 +110,7 @@
     <main id="main" class="main">
         <div class="main-inner">
             <div class="content-wrap">
-                <div id="content" class="content">
-                        <#nested>
-                </div>
+                <#nested>
             </div>
             <div class="sidebar-toggle">
                 <div class="sidebar-toggle-line-wrap">

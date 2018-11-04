@@ -7,4 +7,4 @@
         <div class="powered-by"> <a class="theme-link" target="_blank" href="https://hexo.io">Vangelis</a> 的个人博客</div>
     </div>
 </footer>
-    <div class="back-to-top"> <i class="fa fa-arrow-up"></i></div>
+<div class="back-to-top"> <i class="fa fa-arrow-up"></i></div>

@@ -1,5 +1,6 @@
 <#include "com.ftl">
 <@layout>
+<div id="content" class="content">
     <section id="posts" class="posts-expand">
         <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
             <div class="post-block">
@@ -140,4 +141,5 @@
             </div>
         </article>
     </section>
+</div>
 </@layout>
