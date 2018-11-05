@@ -1,3 +1,8 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: info
 spring:
   thymeleaf:
     prefix: classpath:/templates/
@@ -31,20 +36,3 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
----
-server:
-  port: 8080
-logging:
-  level:
-   root: info
-spring:
-  profiles: native
----
-server:
-  port: 8080
-logging:
-  level:
-    root: error
-spring:
-  profiles: prod
-

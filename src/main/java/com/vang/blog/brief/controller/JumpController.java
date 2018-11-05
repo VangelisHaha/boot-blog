@@ -1,5 +1,6 @@
 package com.vang.blog.brief.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/")
+@Slf4j
 public class JumpController {
 
     /**
@@ -19,6 +21,7 @@ public class JumpController {
      */
     @GetMapping("/")
     public String index(){
+        log.debug("测试日志输出{}","哈哈");
         return "blog/index";
     }
 
@@ -47,5 +50,29 @@ public class JumpController {
     @GetMapping("/photo")
     public String photo(){
         return "blog/photo";
+    }
+    /**
+     * 跳转到嗨起来
+     * @return blog/blogDetails.ftl
+     */
+    @GetMapping("/musicBlog")
+    public String musicBlog(){
+        return "blog/musicBlog";
+    }
+    /**
+     * 跳转到嗨起来
+     * @return blog/blogDetails.ftl
+     */
+    @GetMapping("/music")
+    public String music(){
+        return "blog/music";
+    }
+    /**
+     * 跳转到视频
+     * @return blog/video.ftl
+     */
+    @GetMapping("/video")
+    public String video(){
+        return "blog/video";
     }
 }

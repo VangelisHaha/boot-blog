@@ -44,6 +44,14 @@
                     <a href="/photo/" rel="section"> <i class="menu-item-icon fa fa-fw fa-photo"></i> <br/> 相册
                     </a>
                 </li>
+                <li class="menu-item menu-item-测试">
+                    <a href="/music/" rel="section"> <i class="menu-item-icon fa fa-fw fa-music"></i> <br/> 测试
+                    </a>
+                </li>
+                <li class="menu-item menu-item-视频">
+                    <a href="/video/" rel="section"> <i class="menu-item-icon fa fa-fw fa-video-camera"></i> <br/> 视频
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
