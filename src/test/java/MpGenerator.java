@@ -1,10 +1,7 @@
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
-import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import org.junit.Test;
 
 import java.io.File;
@@ -23,16 +20,16 @@ public class MpGenerator {
     @Test
     public void test(){
 
-        String tableName = "";
-        String packageName = "";
+        String tableName = "blog_article";
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir(getParentUrl() + "/src/main/java");
+        gc.setOutputDir(getParentUrl() + "\\src\\main\\java");
         gc.setAuthor("Vangelis");
         gc.setOpen(false);
+        gc.setActiveRecord(true);
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -46,8 +43,8 @@ public class MpGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("");
-        pc.setParent("com.baomidou.ant");
+//        pc.setModuleName("");
+        pc.setParent("com.vang.blog.test");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -58,14 +55,14 @@ public class MpGenerator {
             }
         };
         List<FileOutConfig> focList = new ArrayList<>();
-        focList.add(new FileOutConfig("/templates/mapper.xml.ftl") {
-            @Override
-            public String outputFile(TableInfo tableInfo) {
-                // 自定义输入文件名称
-                return getParentUrl() + "/src/main/resources/mapper/" + pc.getModuleName()
-                        + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
-            }
-        });
+//        focList.add(new FileOutConfig("/templates/mapper.xml.ftl") {
+//            @Override
+//            public String outputFile(TableInfo tableInfo) {
+//                // 自定义输入文件名称
+//                return getParentUrl() + "/src/main/resources/mapper/" + pc.getModuleName()
+//                        + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+//            }
+//        });
         cfg.setFileOutConfigList(focList);
         mpg.setCfg(cfg);
         mpg.setTemplate(new TemplateConfig().setXml(null));
@@ -80,18 +77,18 @@ public class MpGenerator {
 //        strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");
         strategy.setInclude(tableName);
         strategy.setTablePrefix("");
-        strategy.setSuperEntityColumns("id");
+//        strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
-        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+//        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
     }
 
     private static String getParentUrl() {
         String file_url = ClassLoader.getSystemResource("").getFile();
         File file = new File(file_url);
-        return file.getParent();
+        return new File(file.getParent()).getParent();
     }
     //类型转换
     private static Map<String, String> typeConversion;
@@ -105,7 +102,6 @@ public class MpGenerator {
     }
     @Test
     public void testttt(){
-        String projectPath = System.getProperty("user.dir");
-        System.out.println(projectPath);
+        System.out.println(getParentUrl() + "\\src\\main\\java");
     }
 }

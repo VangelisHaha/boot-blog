@@ -35,7 +35,6 @@ public class LockService {
      * @return 锁id
      */
     public String getRedisLock(String lockKey,Long acquireTimeOut, Long  timeOut) {
-        log.info("LockService -->> getRedisLock begin ...");
         String lockId = UUID.randomUUID().toString();
         int lockTime = (int) (timeOut / 1000);
         //获取过期的时间
